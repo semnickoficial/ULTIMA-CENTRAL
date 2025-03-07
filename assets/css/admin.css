@@ -1,0 +1,279 @@
+/* Estilos Gerais */
+body {
+    background: #1a1a1a;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+    background: #1a1a1a;
+}
+
+/* Header e Navbar */
+.main-header {
+    background: #2d2d2d;
+    border-bottom: 1px solid #3d3d3d;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+    background: #2d2d2d;
+}
+
+.nav-link {
+    color: #fff !important;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    background: #3d3d3d;
+    border-radius: 4px;
+}
+
+/* Sidebar */
+.main-sidebar {
+    background: #2d2d2d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    min-height: 100vh;
+    width: 250px;
+    z-index: 999;
+}
+
+.sidebar-menu {
+    padding: 1rem 0;
+    list-style: none;
+}
+
+.sidebar-menu li a {
+    padding: 12px 20px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li.active a {
+    background: #3d3d3d;
+    color: #fff;
+}
+
+.sidebar-menu li a i {
+    margin-right: 10px;
+}
+
+/* Content Area */
+.content-wrapper {
+    margin-left: 250px;
+    padding-top: 60px;
+    min-height: calc(100vh - 60px);
+    background: #1a1a1a;
+    padding: 80px 20px 20px;
+}
+
+/* Boxes */
+.box {
+    background: #2d2d2d;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.box-header {
+    padding: 1.25rem;
+    border-bottom: 1px solid #3d3d3d;
+}
+
+.box-body {
+    padding: 1.25rem;
+}
+
+.box-title {
+    margin: 0;
+    color: #fff;
+}
+
+/* Forms */
+.form-control {
+    background: #3d3d3d !important;
+    border: 1px solid #4d4d4d !important;
+    color: #fff !important;
+}
+
+.form-control:focus {
+    background: #3d3d3d !important;
+    border-color: #5d5d5d !important;
+    color: #fff !important;
+    box-shadow: none !important;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: #007bff;
+    border-color: #0056b3;
+}
+
+.btn-info {
+    background: #17a2b8;
+    border-color: #117a8b;
+}
+
+.btn-danger {
+    background: #dc3545;
+    border-color: #bd2130;
+}
+
+/* Tables */
+.table {
+    color: #fff !important;
+}
+
+.table thead th {
+    border-bottom: 2px solid #3d3d3d;
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.table td, .table th {
+    border-top: 1px solid #3d3d3d;
+    padding: 12px;
+    vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255,255,255,0.05);
+}
+
+/* Badges */
+.badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.badge-warning {
+    background: #ffc107;
+    color: #000;
+}
+
+.badge-success {
+    background: #28a745;
+}
+
+.badge-danger {
+    background: #dc3545;
+}
+
+.badge-secondary {
+    background: #6c757d;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin-bottom: 1rem;
+}
+
+.alert-success {
+    background: #28a745;
+    border-color: #218838;
+    color: #fff;
+}
+
+.alert-danger {
+    background: #dc3545;
+    border-color: #bd2130;
+    color: #fff;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background: #2d2d2d;
+    border: 1px solid #3d3d3d;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.dropdown-item {
+    color: #fff !important;
+    padding: 8px 20px;
+}
+
+.dropdown-item:hover {
+    background: #3d3d3d;
+    color: #fff;
+}
+
+.dropdown-divider {
+    border-top: 1px solid #3d3d3d;
+}
+
+/* Footer */
+.main-footer {
+    background: #2d2d2d;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+    border-top: 1px solid #3d3d3d;
+    margin-left: 250px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-sidebar {
+        margin-left: -250px;
+        transition: all 0.3s;
+    }
+    
+    .content-wrapper,
+    .main-footer {
+        margin-left: 0;
+    }
+    
+    .sidebar-open .main-sidebar {
+        margin-left: 0;
+    }
+    
+    .sidebar-open .content-wrapper,
+    .sidebar-open .main-footer {
+        margin-left: 250px;
+    }
+}
+
+/* Utilitários */
+.text-white {
+    color: #fff !important;
+}
+
+.text-info {
+    color: #17a2b8 !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+} 
